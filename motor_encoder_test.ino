@@ -7,7 +7,8 @@
 static int batteryVoltage;
 
 //Variable to change the motor speed and direction
-static int duty = -20;
+int m1Duty = -60;   //for adjusting duty cycle, m1 stays constant & m2 adjusts to match
+int m2Duty = -60;
 
 void setup() 
 {
@@ -70,14 +71,44 @@ void loop() {
   {
     //Chose the motor to use:M1(default), M2, M3 or M4
     Serial.print("M1 Duty: ");
-    Serial.println(duty);
-    M1.setDuty(duty);
+    Serial.println(m1Duty);
+    Serial.print("M2 Duty: ");
+    Serial.println(m2Duty);
+    
+    M1.setDuty(m1Duty);
+    M2.setDuty(m2Duty);
   
-    //Chose the encoder to use:encoder1(default) or encoder2
+    //Get encoder data
+    double encoder1Count = encoder1.getRawCount();
+    double encoder2Count = encoder2.getRawCount();
+    double encoderDif = encoder1Count - encoder2Count;
+    
     Serial.print("Encoder1 Pos [counts]: ");
-    Serial.println(encoder1.getRawCount());
-    Serial.print("Encoder1 vel [counts/sec]: ");
-    Serial.println(encoder1.getCountPerSecond());
+    Serial.println(encoder1Count);
+    Serial.print("Encoder2 Pos [counts]: ");
+    Serial.println(encoder2Count);
+    
+    Serial.print("Dif: ");
+    Serial.println(encoderDif);
+    Serial.println();
+
+
+    //if motor 1 has gone at least 5 counts farther than motor 2, increase magnitude of motor 2 duty cycle 
+    //if (encoder1Count/encoder2Count > 1.01)
+    if((abs(encoder1Count) - abs(encoder2Count)) > 5)
+      if (m2Duty > 0)
+        m2Duty++;
+      else if (m2Duty < 0)
+        m2Duty--;
+    // if motor 2 has gone at least 5 counts farther than motor 1, decrease magnitude of motor 2 duty cycle 
+    //else if (encoder1Count/encoder2Count < (0.99) )
+    if((abs(encoder1Count) - abs(encoder2Count)) < -5)
+      if (m2Duty > 0)
+        m2Duty--;
+      else if (m2Duty < 0)
+        m2Duty++;
+
+    
   }
   
   //Keep active the communication MKR1000 & MKRMotorCarrier
