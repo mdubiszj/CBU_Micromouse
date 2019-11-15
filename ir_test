@@ -1,0 +1,36 @@
+//IR TEST CODE
+//Inspired by this tutorial: https://www.instructables.com/id/How-to-setup-a-Pololu-Carrier-with-Sharp-GP2Y0A60S/
+
+
+#define IR_READ_PIN A1 //IN2 on Motor Carrier
+
+// The setup routine runs once when you press reset:
+void setup() {
+  // Sets pin 13 for output in order to blink the LED:
+  pinMode(13, OUTPUT);
+  // Initialize serial communication at 9600 bits per second:
+  Serial.begin(9600);
+}
+
+// The loop routine runs over and over again forever:
+void loop() {
+  
+  // Read the input on analog pin:
+  int sensorValue = analogRead(IR_READ_PIN);
+
+  //Converts analog value to distance in centimeters (NOT CALIBRATED)
+  double IRdistance = 187754 * pow(sensorValue, -1.51);
+
+
+  Serial.print("IR Value (raw): ");
+  Serial.println(sensorValue);
+
+//  Serial.print("IR Value (cm): ");
+//  Serial.println(IRdistance);
+
+
+  
+  
+  delay(250);
+
+}
