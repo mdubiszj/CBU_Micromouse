@@ -36,8 +36,8 @@ void loop() {
 //  Serial.print("Right IR Value (raw): ");
 //  Serial.println(rightSensorValue);
 //
-  Serial.print("Front IR Value (raw): ");
-  Serial.println(frontSensorValue);
+//  Serial.print("Front IR Value (raw): ");
+//  Serial.println(frontSensorValue);
 //
 //  Serial.println();
 
@@ -52,6 +52,12 @@ void loop() {
     Serial.println("RIGHT WALL");
    else
     Serial.println("NO RIGHT WALL");
+
+
+  if(frontSensorValue > IR_THRESHOLD)
+    Serial.println("FRONT WALL");
+   else
+    Serial.println("NO FRONT WALL");
 
   
   
