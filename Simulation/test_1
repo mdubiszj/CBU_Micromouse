@@ -1,0 +1,47 @@
+//2020-01-05
+//This is a simple simulation: the mouse will move in the first direction in this list available: forward, right, left, backwards
+
+
+#include <iostream>
+#include <string>
+
+#include "API.h"
+
+void log(const std::string& text) {
+    std::cerr << text << std::endl;
+}
+
+int main(int argc, char* argv[]) {
+    log("Running...");
+    API::setColor(0, 0, 'G');
+    API::setText(0, 0, "GO!");
+    while (true) {
+        
+
+	// if there's no wall in front, keep facing front
+	if(!API::wallFront()){
+	}
+
+	// else if no wall to the right, turn right
+	else if(!API::wallRight()){
+		API::turnRight();
+	}
+
+	//else if no wall to the left, turn left
+	else if(!API::wallLeft()){
+		API::turnLeft();
+	}
+
+	//else, dead end: turn around!
+	else{
+		API::turnLeft();
+		API::turnLeft();
+	}
+
+	//keep moving forward!
+        API::moveForward();
+	log("Let's gooooo!!!!!");	
+
+	
+    }
+}
