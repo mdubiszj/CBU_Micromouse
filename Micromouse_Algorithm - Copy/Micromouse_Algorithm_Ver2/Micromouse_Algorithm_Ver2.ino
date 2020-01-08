@@ -1,4 +1,5 @@
 // NOTE: adjacent/neighboring cells mean direct, not diagonal\
+// TO DO: there's some confusion between addressing a cell with row/column coordinates or x/y coordinates. What if we have maze[0][0] be (0,0) to avoid confusion? (Dubisz)
 // TO DO: add incrementing to movement functions based on direction
 // TO DO: incorporate way to sense walls and tweak function based on wall sensors
 // TO DO: Transpose southIsOpen to fit with whenever we rotate or move
@@ -265,6 +266,8 @@ void MazeCell::clearData() {
 }
 
 StackArray <MazeCell> floodFillStack; // Holds a stack of type Mazecell
+
+
 
 int maze[5][5] = { {4, 3, 2, 3, 4},     // micromouse would start at maze[0][4]
                    {3, 2, 1, 2, 3}, 
