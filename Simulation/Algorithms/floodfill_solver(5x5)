@@ -15,39 +15,111 @@
 // **********************************************************************
 
 
-
+//replaces Serial..print(str)
 void log(const std::string& text) {
-	std::cerr << text << std::endl;
+	std::cerr << text;
 }
 
+//replaces Serial..print()
 void log() {
 	std::cerr << std::endl;
 }
 
-
-
-/* void log(int num) {
+//replaces Serial..print(int)
+void log(int num) {
 	
-	std::string& numToPrint="0";
+	//const std::string& numToPrint="Hello";
 	//this is a dumb way to do this, but it's because of difficulty converting int->string
 			switch(num){
-				case 0: {numToPrint="0"; break;}
-				case 1: {numToPrint="1"; break;}
-				case 2: {numToPrint="2"; break;}
-				case 3: {numToPrint="3"; break;}
-				case 4: {numToPrint="4"; break;}
-				case 5: {numToPrint="5"; break;}
-				case 6: {numToPrint="6"; break;}
-				case 7: {numToPrint="7"; break;}
-				case 8: {numToPrint="8"; break;}
-				case 9: {numToPrint="9"; break;}
-				case 10: {numToPrint="10"; break;}
-				default: {numToPrint="?"; break;}
+				case 0: {const std::string& numToPrint="0"; std::cerr << numToPrint; break;}
+				case 1: {const std::string& numToPrint="1"; std::cerr << numToPrint; break;}
+				case 2: {const std::string& numToPrint="2"; std::cerr << numToPrint; break;}
+				case 3: {const std::string& numToPrint="3"; std::cerr << numToPrint; break;}
+				case 4: {const std::string& numToPrint="4"; std::cerr << numToPrint; break;}
+				case 5: {const std::string& numToPrint="5"; std::cerr << numToPrint; break;}
+				case 6: {const std::string& numToPrint="6"; std::cerr << numToPrint; break;}
+				case 7: {const std::string& numToPrint="7"; std::cerr << numToPrint; break;}
+				case 8: {const std::string& numToPrint="8"; std::cerr << numToPrint; break;}
+				case 9: {const std::string& numToPrint="9"; std::cerr << numToPrint; break;}
+				case 10: {const std::string& numToPrint="10"; std::cerr << numToPrint; break;}
+				case 11: {const std::string& numToPrint="11"; std::cerr << numToPrint; break;}
+				case 12: {const std::string& numToPrint="12"; std::cerr << numToPrint; break;}
+				case 13: {const std::string& numToPrint="13"; std::cerr << numToPrint; break;}
+				case 14: {const std::string& numToPrint="14"; std::cerr << numToPrint; break;}
+				case 15: {const std::string& numToPrint="15"; std::cerr << numToPrint; break;}
+				case 16: {const std::string& numToPrint="16"; std::cerr << numToPrint; break;}
+				case 17: {const std::string& numToPrint="17"; std::cerr << numToPrint; break;}
+				case 18: {const std::string& numToPrint="18"; std::cerr << numToPrint; break;}
+				case 19: {const std::string& numToPrint="19"; std::cerr << numToPrint; break;}
+				case 20: {const std::string& numToPrint="20"; std::cerr << numToPrint; break;}
+				case 21: {const std::string& numToPrint="21"; std::cerr << numToPrint; break;}
+				case 22: {const std::string& numToPrint="22"; std::cerr << numToPrint; break;}
+				case 23: {const std::string& numToPrint="23"; std::cerr << numToPrint; break;}
+				case 24: {const std::string& numToPrint="24"; std::cerr << numToPrint; break;}
+				case 25: {const std::string& numToPrint="25"; std::cerr << numToPrint; break;}
+				case 26: {const std::string& numToPrint="26"; std::cerr << numToPrint; break;}
+				case 27: {const std::string& numToPrint="27"; std::cerr << numToPrint; break;}
+				case 28: {const std::string& numToPrint="28"; std::cerr << numToPrint; break;}
+				case 29: {const std::string& numToPrint="29"; std::cerr << numToPrint; break;}
+				case 30: {const std::string& numToPrint="30"; std::cerr << numToPrint; break;}
+				default: {const std::string& numToPrint="?"; std::cerr << numToPrint; break;}
+			}
+} 
+
+
+//replaces Serial..println(str)
+void logln(const std::string& text) {
+	std::cerr << text << std::endl;
+}
+
+
+//replaces Serial..println(int)
+void logln(int num) {
+	
+	//const std::string& numToPrint="Hello";
+	//this is a dumb way to do this, but it's because of difficulty converting int->string
+			switch(num){
+				case 0: {const std::string& numToPrint="0"; std::cerr << numToPrint; break;}
+				case 1: {const std::string& numToPrint="1"; std::cerr << numToPrint; break;}
+				case 2: {const std::string& numToPrint="2"; std::cerr << numToPrint; break;}
+				case 3: {const std::string& numToPrint="3"; std::cerr << numToPrint; break;}
+				case 4: {const std::string& numToPrint="4"; std::cerr << numToPrint; break;}
+				case 5: {const std::string& numToPrint="5"; std::cerr << numToPrint; break;}
+				case 6: {const std::string& numToPrint="6"; std::cerr << numToPrint; break;}
+				case 7: {const std::string& numToPrint="7"; std::cerr << numToPrint; break;}
+				case 8: {const std::string& numToPrint="8"; std::cerr << numToPrint; break;}
+				case 9: {const std::string& numToPrint="9"; std::cerr << numToPrint; break;}
+				case 10: {const std::string& numToPrint="10"; std::cerr << numToPrint; break;}
+				case 11: {const std::string& numToPrint="11"; std::cerr << numToPrint; break;}
+				case 12: {const std::string& numToPrint="12"; std::cerr << numToPrint; break;}
+				case 13: {const std::string& numToPrint="13"; std::cerr << numToPrint; break;}
+				case 14: {const std::string& numToPrint="14"; std::cerr << numToPrint; break;}
+				case 15: {const std::string& numToPrint="15"; std::cerr << numToPrint; break;}
+				case 16: {const std::string& numToPrint="16"; std::cerr << numToPrint; break;}
+				case 17: {const std::string& numToPrint="17"; std::cerr << numToPrint; break;}
+				case 18: {const std::string& numToPrint="18"; std::cerr << numToPrint; break;}
+				case 19: {const std::string& numToPrint="19"; std::cerr << numToPrint; break;}
+				case 20: {const std::string& numToPrint="20"; std::cerr << numToPrint; break;}
+				case 21: {const std::string& numToPrint="21"; std::cerr << numToPrint; break;}
+				case 22: {const std::string& numToPrint="22"; std::cerr << numToPrint; break;}
+				case 23: {const std::string& numToPrint="23"; std::cerr << numToPrint; break;}
+				case 24: {const std::string& numToPrint="24"; std::cerr << numToPrint; break;}
+				case 25: {const std::string& numToPrint="25"; std::cerr << numToPrint; break;}
+				case 26: {const std::string& numToPrint="26"; std::cerr << numToPrint; break;}
+				case 27: {const std::string& numToPrint="27"; std::cerr << numToPrint; break;}
+				case 28: {const std::string& numToPrint="28"; std::cerr << numToPrint; break;}
+				case 29: {const std::string& numToPrint="29"; std::cerr << numToPrint; break;}
+				case 30: {const std::string& numToPrint="30"; std::cerr << numToPrint; break;}
+				default: {const std::string& numToPrint="?"; std::cerr << numToPrint; break;}
 			}
 			
-	std::cerr << numToPrint << std::endl;
-} */
+		std::cerr << std::endl;
+} 
 
+//replaces Serial..println()
+void logln() {
+	std::cerr << std::endl << std::endl;
+}
 
 //write the values of each cell onto the simulation maze
 void printCellValues();
@@ -60,14 +132,6 @@ void printCellValues();
 
 
 #include "StackArray.h"
-
-
-
-
-
-
-
-
 
 
 
@@ -298,48 +362,48 @@ void findMin() {
         if (currentLocAdjCellValue[i] < currentLocMD) {
           currentLocMD = currentLocAdjCellValue[i];
           nextLocation = currentLocAdj[i];
-          log("THIS IF STATEMENT HAS BEEN EXECUTED");
+          logln("THIS IF STATEMENT HAS BEEN EXECUTED");
         }
         xNext = nextLocation.xStack;
         yNext = nextLocation.yStack;
         
         log("CurrentLocAdj[");
-        //log(i);
+        log(i);
         log("]: x=");
-        //log(currentLocAdj[i].xStack);
+        log(currentLocAdj[i].xStack);
         log(", y=");
-        //log(currentLocAdj[i].yStack);
+        log(currentLocAdj[i].yStack);
         log(", cell value=");
-        //log(currentLocAdj[i].cellValue);
+        logln(currentLocAdj[i].cellValue);
         log("currentLocMD = ");
-        //log(currentLocMD);
+        logln(currentLocMD);
       }
 }
 
 void checkCells(){
           if (((x - 1 >= 0) && (x - 1 <= 4)) && !(maze[x][y].hasNWall)) {    // check north cell
-        log("Adjacent North Cell found.");
+        logln("Adjacent North Cell found.");
         currentLocAdj[j] = { x - 1, y, maze[x - 1][y].cellValue };
         currentLocAdjCellValue[j] = maze[x - 1][y].cellValue;
         j++;
       }
 
       if (((x + 1 >= 0) && (x + 1 <= 4)) && !(maze[x][y].hasSWall)) {    // check south cell
-        log("Adjacent South Cell found.");
+        logln("Adjacent South Cell found.");
         currentLocAdj[j] = { x + 1, y, maze[x + 1][y].cellValue };
         currentLocAdjCellValue[j] = maze[x + 1][y].cellValue;
         j++;
       }
 
       if (((y - 1 >= 0) && (y - 1 <= 4)) && !(maze[x][y].hasWWall)) {     // check west cell
-        log("Adjacent West Cell found.");
+        logln("Adjacent West Cell found.");
         currentLocAdj[j] = { x, y - 1, maze[x][y - 1].cellValue };
         currentLocAdjCellValue[j] = maze[x][y - 1].cellValue;
         j++;
       }
 
       if (((y + 1 >= 0) && (y + 1 <= 4)) && !(maze[x][y].hasEWall)) {     // check east cell
-        log("Adjacent East Cell found.");
+        logln("Adjacent East Cell found.");
         currentLocAdj[j] = { x, y + 1, maze[x][y + 1].cellValue };
         currentLocAdjCellValue[j] = maze[x][y + 1].cellValue;
         j++;
@@ -435,35 +499,35 @@ void senseWalls(int theta) {
 // **********************************************************************
 
 void moveNorth() {
-	log("Moving north.");
-	currentLocation.xStack--;
-	currentLocation.cellValue = maze[currentLocation.xStack][y].cellValue;
-	x--;
-	xVirtual = x;
+  logln("Moving north.");
+  currentLocation.xStack--;
+  currentLocation.cellValue = maze[currentLocation.xStack][y].cellValue;
+  x--;
+  xVirtual = x;
 }
 
 void moveSouth() {
-	log("Moving south.");
-	currentLocation.xStack++;
-	currentLocation.cellValue = maze[currentLocation.xStack][y].cellValue;
-	x++;
-	xVirtual = x;
+  logln("Moving south.");
+  currentLocation.xStack++;
+  currentLocation.cellValue = maze[currentLocation.xStack][y].cellValue;
+  x++;
+  xVirtual = x;
 }
 
 void moveWest() {
-	log("Moving west.");
-	currentLocation.yStack--;
-	currentLocation.cellValue = maze[x][currentLocation.yStack].cellValue;
-	y--;
-	yVirtual = y;
+  logln("Moving west.");
+  currentLocation.yStack--;
+  currentLocation.cellValue = maze[x][currentLocation.yStack].cellValue;
+  y--;
+  yVirtual = y;
 }
 
 void moveEast() {
-	log("Moving east.");
-	currentLocation.yStack++;
-	currentLocation.cellValue = maze[x][currentLocation.yStack].cellValue;
-	y++;
-	yVirtual = y;
+  logln("Moving east.");
+  currentLocation.yStack++;
+  currentLocation.cellValue = maze[x][currentLocation.yStack].cellValue;
+  y++;
+  yVirtual = y;
 }
 
 // ***************--------------------------------------*****************
@@ -487,11 +551,11 @@ void floodFill(bool stackIsEmpty) {
   currentPush = { xVirtual, yVirtual, maze[xVirtual][yVirtual].cellValue, maze[xVirtual][yVirtual].hasNWall,
           maze[xVirtual][yVirtual].hasSWall, maze[xVirtual][yVirtual].hasWWall, maze[xVirtual][yVirtual].hasEWall };
   log("Current Push: x=");
-  //log(currentPush.xStack);
+  log(currentPush.xStack);
   log(", y=");
-  //log(currentPush.yStack);
+  log(currentPush.yStack);
   log(", cell value=");
-  //log(currentPush.cellValue);
+  logln(currentPush.cellValue);
 
   if (stackIsEmpty) {                       // only true for the 1st time
     floodFillStack.push(currentPush);             // push current physical cell location
@@ -500,11 +564,11 @@ void floodFill(bool stackIsEmpty) {
 
   currentPop = floodFillStack.pop();                // pop    
   log("Current Pop: x=");
-  //log(currentPop.xStack);
+  log(currentPop.xStack);
   log(", y=");
-  //log(currentPop.yStack);
+  log(currentPop.yStack);
   log(", cell value=");
-  //log(currentPop.cellValue);
+  logln(currentPop.cellValue);
   isInStack[currentPop.xStack][currentPop.yStack] = false;
 
   MazeCell top = { xVirtual - 1, yVirtual, maze[xVirtual - 1][yVirtual].cellValue, maze[xVirtual - 1][yVirtual].hasNWall,
@@ -531,13 +595,13 @@ void floodFill(bool stackIsEmpty) {
     adjacentVal[arrayCounter] = top.cellValue;    // these are arrays
     arrayCounter++;
     log("Top cell will be compared: ");
-    //log(xVirtual - 1);
+    log(xVirtual - 1);
     log(",");
-    //log(yVirtual);
-    log();
+    log(yVirtual);
+    logln();
     log("Array counter: ");
-    //log(arrayCounter);
-    log();
+    log(arrayCounter);
+    logln();
   }
 
   if((xVirtual + 1 == 2 && yVirtual == 2) && !maze[xVirtual][yVirtual].hasSWall){
@@ -552,13 +616,13 @@ void floodFill(bool stackIsEmpty) {
     adjacentVal[arrayCounter] = bottom.cellValue;
     arrayCounter++;
     log("Bottom cell will be compared: ");
-    //log(xVirtual + 1);
+    log(xVirtual + 1);
     log(",");
-    //log(yVirtual);
-    log();
+    log(yVirtual);
+    logln();
     log("Array counter: ");
-    //log(arrayCounter);
-    log();
+    log(arrayCounter);
+    logln();
   }
 
   if((xVirtual == 2 && yVirtual - 1 == 2) && !maze[xVirtual][yVirtual].hasWWall){
@@ -573,13 +637,13 @@ void floodFill(bool stackIsEmpty) {
     adjacentVal[arrayCounter] = left.cellValue;
     arrayCounter++;
     log("Left cell will be compared: ");
-    //log(xVirtual);
+    log(xVirtual);
     log(",");
-    //log(yVirtual - 1);
-    log();
+    log(yVirtual - 1);
+    logln();
     log("Array counter: ");
-    //log(arrayCounter);
-    log();
+    log(arrayCounter);
+    logln();
   }
 
   if((xVirtual == 2 && yVirtual + 1 == 2) && !maze[xVirtual][yVirtual].hasEWall){
@@ -594,13 +658,13 @@ void floodFill(bool stackIsEmpty) {
     adjacentVal[arrayCounter] = right.cellValue;
     arrayCounter++;
     log("Right cell will be compared: ");
-    //log(xVirtual);
+    log(xVirtual);
     log(",");
-    //log(yVirtual + 1);
-    log();
+    log(yVirtual + 1);
+    logln();
     log("Array counter: ");
-    //log(arrayCounter);
-    log();
+    log(arrayCounter);
+    logln();
   }
 
   md = adjacentVal[0]; // sets md to first vector value
@@ -610,14 +674,14 @@ void floodFill(bool stackIsEmpty) {
     if (adjacentVal[i] < md) {
       md = adjacentVal[i];
       log("md in for loop: ");
-      //log(md);
-      log();
+      log(md);
+      logln();
     }
   }
 
   log("New md: ");
-  //log(md);
-  log();
+  log(md);
+  logln();
 
   // *********************************************
   // *********************************************
@@ -635,17 +699,17 @@ void floodFill(bool stackIsEmpty) {
     
     maze[currentPop.xStack][currentPop.yStack].cellValue = md + 1; // update current cell value
     log("New Cell Value: ");
-    //log(maze[currentPop.xStack][currentPop.yStack].cellValue);
-    log();
+    log(maze[currentPop.xStack][currentPop.yStack].cellValue);
+    logln();
     
     for (int i = 0; i < arrayCounter; i++) {    // push all adjacent squares into stack
       if (adjacentVal[i] != 0) {      //*** THIS IF STATEMENT IS UNNECESSARY? (already checks if it's center cell above, line 430)
         floodFillStack.push(adjacentCell[i]);
         isInStack[adjacentCell[i].xStack][adjacentCell[i].yStack] = true;
         log("Pushing values into stack: i = ");
-        //log(i);
+        log(i);
         
-        log();
+        logln();
       }
     }
   }
@@ -656,12 +720,12 @@ void floodFill(bool stackIsEmpty) {
     updateXYPeek = floodFillStack.peek(); // getting x and y for next recursion
     xVirtual = updateXYPeek.xStack;
     log("xVirtual: ");
-    //log(xVirtual);
-    log();
+    log(xVirtual);
+    logln();
     yVirtual = updateXYPeek.yStack;
     log("yVirtual: ");
-    //log(yVirtual);
-    log();
+    log(yVirtual);
+    logln();
 
     // reset all array values for next recursion    
     for (int i = 0; i < 4; i++) {
@@ -699,9 +763,6 @@ void floodFill(bool stackIsEmpty) {
 
 int main(int argc, char* argv[]) {
 	log("Running...");
-	log("Is this trouble?");
-
-
 
 
 	// disgusting
@@ -762,10 +823,10 @@ int main(int argc, char* argv[]) {
 			moveFwd(1, mDuty, mDuty); // 1 cell 
 			moveNorth();        // update first movement
 			log("Current location: ");
-			//log(xVirtual);
+			log(xVirtual);
 			log(", ");
-			//log(yVirtual);
-			//log();
+			log(yVirtual);
+			logln();
 
 			// all movements after the initial one
 			while (isAtCenter == false) {
@@ -777,38 +838,22 @@ int main(int argc, char* argv[]) {
 				//  // wait to let micromouse settle down, get good reading from IR sensors
 
 				// Sense walls
-				log("Sensing walls...");
+				logln("Sensing walls...");
 				senseWalls(theta);
 
-				// output location & surrounding wall info
-				log("*********************");
-				log("Location: [");
-				//log(x);
-				log("][");
-				//log(y);
-				log("]");
-				log("North Open: ");
-				//log(northIsOpen);
-				log("East Open: ");
-				//log(eastIsOpen);
-				log("South Open: ");
-				//log(southIsOpen);
-				log("West Open: ");
-				//log(westIsOpen);
-
-				log("floodfill maze #'s:");
+				logln("floodfill maze #'s (before floodfill):");
 				for (int i = 0; i < 5; i++) {
-					for (int j = 0; j < 5; j++) {
-						//log(maze[i][j].cellValue);
-						//log(' ');
-					}
-					//log();
+				  for (int j = 0; j < 5; j++) {
+					log(maze[i][j].cellValue);
+					log(" ");
+				  }
+				  logln();
 				}
 
-				log("*********************");
-
-				log("Executing flood-fill");
-				floodFill(true);
+      logln("*********************");
+      
+      logln("Executing flood-fill");
+      floodFill(true);
 				
 				//SIMULATION-ONLY: prints floodfill values on each cell
 				printCellValues();
@@ -819,16 +864,16 @@ int main(int argc, char* argv[]) {
 
 
 				// determine where cell with md is
-				log("Finding minimum distance of open neighbors");
+				logln("Finding minimum distance of open neighbors");
 				j = 0;
 
 				// beginning of cell checking for cell w/ md
 				checkCells();
-
+				  
 				log("j (# of adjacent cells to check) = ");
-				//log(j);
-				//log();
-
+				log(j);
+				logln();
+				  
 				currentLocMD = currentLocAdjCellValue[0];   // sets md to first array value
 				nextLocation = currentLocAdj[0];
 
@@ -836,20 +881,20 @@ int main(int argc, char* argv[]) {
 				findMin();
 
 				for(int i = 0; i < 4; i++){
-				currentLocAdjCellValue[i] = 500; // reset cell values
+					currentLocAdjCellValue[i] = 500; // reset cell values
 				}
 
 				moveFunc:
 				// x changes; y doesn't change
-				log("Executing movement based on md");
+				logln("Executing movement based on md");
 				move(isMovingBack);
 
 				// check if robot reached center
 				if (currentLocation.cellValue == 0) {
-				isAtCenter = true;
-				log("Reached the center!!");
-				isMovingBack = true;
-				//backTrack();
+					isAtCenter = true;
+					logln("Reached the center!!");
+					isMovingBack = true;
+					//backTrack();
 				}
 			}
 
@@ -873,6 +918,11 @@ void printCellValues(){
 			
 			int num = maze[4-j][i].cellValue;
 			
+			
+			//NOTE: STD:TO_STRING DOES NOT WORK WITH MINGW
+			//std::string num_string = std::to_string(num);
+			
+			
 			//this is a dumb way to do this, but it's because of difficulty converting int->string
 			switch(num){
 				case 0: {API::setText(i,j,"0"); break;}
@@ -886,6 +936,16 @@ void printCellValues(){
 				case 8: {API::setText(i,j,"8"); break;}
 				case 9: {API::setText(i,j,"9"); break;}
 				case 10: {API::setText(i,j,"10"); break;}
+				case 11: {API::setText(i,j,"11"); break;}
+				case 12: {API::setText(i,j,"12"); break;}
+				case 13: {API::setText(i,j,"13"); break;}
+				case 14: {API::setText(i,j,"14"); break;}
+				case 15: {API::setText(i,j,"15"); break;}
+				case 16: {API::setText(i,j,"16"); break;}
+				case 17: {API::setText(i,j,"17"); break;}
+				case 18: {API::setText(i,j,"18"); break;}
+				case 19: {API::setText(i,j,"19"); break;}
+				case 20: {API::setText(i,j,"20"); break;}
 				default: {API::setText(i,j,"?"); break;}
 			}
 		}
