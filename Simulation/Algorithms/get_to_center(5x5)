@@ -62,6 +62,36 @@ void log(int num) {
 				case 28: {const std::string& numToPrint="28"; std::cerr << numToPrint; break;}
 				case 29: {const std::string& numToPrint="29"; std::cerr << numToPrint; break;}
 				case 30: {const std::string& numToPrint="30"; std::cerr << numToPrint; break;}
+				case 31: {const std::string& numToPrint="31"; std::cerr << numToPrint; break;}
+				case 32: {const std::string& numToPrint="32"; std::cerr << numToPrint; break;}
+				case 33: {const std::string& numToPrint="33"; std::cerr << numToPrint; break;}
+				case 34: {const std::string& numToPrint="34"; std::cerr << numToPrint; break;}
+				case 35: {const std::string& numToPrint="35"; std::cerr << numToPrint; break;}
+				case 36: {const std::string& numToPrint="36"; std::cerr << numToPrint; break;}
+				case 37: {const std::string& numToPrint="37"; std::cerr << numToPrint; break;}
+				case 38: {const std::string& numToPrint="38"; std::cerr << numToPrint; break;}
+				case 39: {const std::string& numToPrint="39"; std::cerr << numToPrint; break;}
+				case 40: {const std::string& numToPrint="40"; std::cerr << numToPrint; break;}
+				case 41: {const std::string& numToPrint="41"; std::cerr << numToPrint; break;}
+				case 42: {const std::string& numToPrint="42"; std::cerr << numToPrint; break;}
+				case 43: {const std::string& numToPrint="43"; std::cerr << numToPrint; break;}
+				case 44: {const std::string& numToPrint="44"; std::cerr << numToPrint; break;}
+				case 45: {const std::string& numToPrint="45"; std::cerr << numToPrint; break;}
+				case 46: {const std::string& numToPrint="46"; std::cerr << numToPrint; break;}
+				case 47: {const std::string& numToPrint="47"; std::cerr << numToPrint; break;}
+				case 48: {const std::string& numToPrint="48"; std::cerr << numToPrint; break;}
+				case 49: {const std::string& numToPrint="49"; std::cerr << numToPrint; break;}
+				case 50: {const std::string& numToPrint="50"; std::cerr << numToPrint; break;}
+				case 51: {const std::string& numToPrint="51"; std::cerr << numToPrint; break;}
+				case 52: {const std::string& numToPrint="52"; std::cerr << numToPrint; break;}
+				case 53: {const std::string& numToPrint="53"; std::cerr << numToPrint; break;}
+				case 54: {const std::string& numToPrint="54"; std::cerr << numToPrint; break;}
+				case 55: {const std::string& numToPrint="55"; std::cerr << numToPrint; break;}
+				case 56: {const std::string& numToPrint="56"; std::cerr << numToPrint; break;}
+				case 57: {const std::string& numToPrint="57"; std::cerr << numToPrint; break;}
+				case 58: {const std::string& numToPrint="58"; std::cerr << numToPrint; break;}
+				case 59: {const std::string& numToPrint="59"; std::cerr << numToPrint; break;}
+				case 60: {const std::string& numToPrint="60"; std::cerr << numToPrint; break;}
 				default: {const std::string& numToPrint="?"; std::cerr << numToPrint; break;}
 			}
 } 
@@ -110,6 +140,36 @@ void logln(int num) {
 				case 28: {const std::string& numToPrint="28"; std::cerr << numToPrint; break;}
 				case 29: {const std::string& numToPrint="29"; std::cerr << numToPrint; break;}
 				case 30: {const std::string& numToPrint="30"; std::cerr << numToPrint; break;}
+				case 31: {const std::string& numToPrint="31"; std::cerr << numToPrint; break;}
+				case 32: {const std::string& numToPrint="32"; std::cerr << numToPrint; break;}
+				case 33: {const std::string& numToPrint="33"; std::cerr << numToPrint; break;}
+				case 34: {const std::string& numToPrint="34"; std::cerr << numToPrint; break;}
+				case 35: {const std::string& numToPrint="35"; std::cerr << numToPrint; break;}
+				case 36: {const std::string& numToPrint="36"; std::cerr << numToPrint; break;}
+				case 37: {const std::string& numToPrint="37"; std::cerr << numToPrint; break;}
+				case 38: {const std::string& numToPrint="38"; std::cerr << numToPrint; break;}
+				case 39: {const std::string& numToPrint="39"; std::cerr << numToPrint; break;}
+				case 40: {const std::string& numToPrint="40"; std::cerr << numToPrint; break;}
+				case 41: {const std::string& numToPrint="41"; std::cerr << numToPrint; break;}
+				case 42: {const std::string& numToPrint="42"; std::cerr << numToPrint; break;}
+				case 43: {const std::string& numToPrint="43"; std::cerr << numToPrint; break;}
+				case 44: {const std::string& numToPrint="44"; std::cerr << numToPrint; break;}
+				case 45: {const std::string& numToPrint="45"; std::cerr << numToPrint; break;}
+				case 46: {const std::string& numToPrint="46"; std::cerr << numToPrint; break;}
+				case 47: {const std::string& numToPrint="47"; std::cerr << numToPrint; break;}
+				case 48: {const std::string& numToPrint="48"; std::cerr << numToPrint; break;}
+				case 49: {const std::string& numToPrint="49"; std::cerr << numToPrint; break;}
+				case 50: {const std::string& numToPrint="50"; std::cerr << numToPrint; break;}
+				case 51: {const std::string& numToPrint="51"; std::cerr << numToPrint; break;}
+				case 52: {const std::string& numToPrint="52"; std::cerr << numToPrint; break;}
+				case 53: {const std::string& numToPrint="53"; std::cerr << numToPrint; break;}
+				case 54: {const std::string& numToPrint="54"; std::cerr << numToPrint; break;}
+				case 55: {const std::string& numToPrint="55"; std::cerr << numToPrint; break;}
+				case 56: {const std::string& numToPrint="56"; std::cerr << numToPrint; break;}
+				case 57: {const std::string& numToPrint="57"; std::cerr << numToPrint; break;}
+				case 58: {const std::string& numToPrint="58"; std::cerr << numToPrint; break;}
+				case 59: {const std::string& numToPrint="59"; std::cerr << numToPrint; break;}
+				case 60: {const std::string& numToPrint="60"; std::cerr << numToPrint; break;}
 				default: {const std::string& numToPrint="?"; std::cerr << numToPrint; break;}
 			}
 			
@@ -945,7 +1005,47 @@ void printCellValues(){
 				case 17: {API::setText(i,j,"17"); break;}
 				case 18: {API::setText(i,j,"18"); break;}
 				case 19: {API::setText(i,j,"19"); break;}
-				case 20: {API::setText(i,j,"20"); break;}
+				case 20: {API::setText(i,j,"0"); break;}
+				case 21: {API::setText(i,j,"1"); break;}
+				case 22: {API::setText(i,j,"2"); break;}
+				case 23: {API::setText(i,j,"3"); break;}
+				case 24: {API::setText(i,j,"4"); break;}
+				case 25: {API::setText(i,j,"5"); break;}
+				case 26: {API::setText(i,j,"6"); break;}
+				case 27: {API::setText(i,j,"7"); break;}
+				case 28: {API::setText(i,j,"8"); break;}
+				case 29: {API::setText(i,j,"9"); break;}
+				case 30: {API::setText(i,j,"0"); break;}
+				case 31: {API::setText(i,j,"1"); break;}
+				case 32: {API::setText(i,j,"2"); break;}
+				case 33: {API::setText(i,j,"3"); break;}
+				case 34: {API::setText(i,j,"4"); break;}
+				case 35: {API::setText(i,j,"5"); break;}
+				case 36: {API::setText(i,j,"6"); break;}
+				case 37: {API::setText(i,j,"7"); break;}
+				case 38: {API::setText(i,j,"8"); break;}
+				case 39: {API::setText(i,j,"9"); break;}
+				case 40: {API::setText(i,j,"0"); break;}
+				case 41: {API::setText(i,j,"1"); break;}
+				case 42: {API::setText(i,j,"2"); break;}
+				case 43: {API::setText(i,j,"3"); break;}
+				case 44: {API::setText(i,j,"4"); break;}
+				case 45: {API::setText(i,j,"5"); break;}
+				case 46: {API::setText(i,j,"6"); break;}
+				case 47: {API::setText(i,j,"7"); break;}
+				case 48: {API::setText(i,j,"8"); break;}
+				case 49: {API::setText(i,j,"9"); break;}
+				case 50: {API::setText(i,j,"0"); break;}
+				case 51: {API::setText(i,j,"1"); break;}
+				case 52: {API::setText(i,j,"2"); break;}
+				case 53: {API::setText(i,j,"3"); break;}
+				case 54: {API::setText(i,j,"4"); break;}
+				case 55: {API::setText(i,j,"5"); break;}
+				case 56: {API::setText(i,j,"6"); break;}
+				case 57: {API::setText(i,j,"7"); break;}
+				case 58: {API::setText(i,j,"8"); break;}
+				case 59: {API::setText(i,j,"9"); break;}
+				case 60: {API::setText(i,j,"0"); break;}
 				default: {API::setText(i,j,"?"); break;}
 			}
 		}
