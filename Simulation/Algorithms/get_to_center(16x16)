@@ -1,0 +1,1066 @@
+#include <iostream>
+#include <string>
+
+
+#include "API.h"
+
+
+// **********************************************************************
+// **********************************************************************
+// **********************----------------------**************************
+// ******************| SIMULATION-ONLY FUNCTIONS |***********************
+// **********************----------------------**************************
+// **********************************************************************
+// **********************************************************************
+
+
+//replaces Serial..print(str)
+void log(const std::string& text) {
+	std::cerr << text;
+}
+
+//replaces Serial..print()
+void log() {
+	std::cerr << std::endl;
+}
+
+//replaces Serial..print(int)
+void log(int num) {
+
+	//const std::string& numToPrint="Hello";
+	//this is a dumb way to do this, but it's because of difficulty converting int->string
+	switch (num) {
+	case 0: {const std::string& numToPrint = "0"; std::cerr << numToPrint; break; }
+	case 1: {const std::string& numToPrint = "1"; std::cerr << numToPrint; break; }
+	case 2: {const std::string& numToPrint = "2"; std::cerr << numToPrint; break; }
+	case 3: {const std::string& numToPrint = "3"; std::cerr << numToPrint; break; }
+	case 4: {const std::string& numToPrint = "4"; std::cerr << numToPrint; break; }
+	case 5: {const std::string& numToPrint = "5"; std::cerr << numToPrint; break; }
+	case 6: {const std::string& numToPrint = "6"; std::cerr << numToPrint; break; }
+	case 7: {const std::string& numToPrint = "7"; std::cerr << numToPrint; break; }
+	case 8: {const std::string& numToPrint = "8"; std::cerr << numToPrint; break; }
+	case 9: {const std::string& numToPrint = "9"; std::cerr << numToPrint; break; }
+	case 10: {const std::string& numToPrint = "10"; std::cerr << numToPrint; break; }
+	case 11: {const std::string& numToPrint = "11"; std::cerr << numToPrint; break; }
+	case 12: {const std::string& numToPrint = "12"; std::cerr << numToPrint; break; }
+	case 13: {const std::string& numToPrint = "13"; std::cerr << numToPrint; break; }
+	case 14: {const std::string& numToPrint = "14"; std::cerr << numToPrint; break; }
+	case 15: {const std::string& numToPrint = "15"; std::cerr << numToPrint; break; }
+	case 16: {const std::string& numToPrint = "16"; std::cerr << numToPrint; break; }
+	case 17: {const std::string& numToPrint = "17"; std::cerr << numToPrint; break; }
+	case 18: {const std::string& numToPrint = "18"; std::cerr << numToPrint; break; }
+	case 19: {const std::string& numToPrint = "19"; std::cerr << numToPrint; break; }
+	case 20: {const std::string& numToPrint = "20"; std::cerr << numToPrint; break; }
+	case 21: {const std::string& numToPrint = "21"; std::cerr << numToPrint; break; }
+	case 22: {const std::string& numToPrint = "22"; std::cerr << numToPrint; break; }
+	case 23: {const std::string& numToPrint = "23"; std::cerr << numToPrint; break; }
+	case 24: {const std::string& numToPrint = "24"; std::cerr << numToPrint; break; }
+	case 25: {const std::string& numToPrint = "25"; std::cerr << numToPrint; break; }
+	case 26: {const std::string& numToPrint = "26"; std::cerr << numToPrint; break; }
+	case 27: {const std::string& numToPrint = "27"; std::cerr << numToPrint; break; }
+	case 28: {const std::string& numToPrint = "28"; std::cerr << numToPrint; break; }
+	case 29: {const std::string& numToPrint = "29"; std::cerr << numToPrint; break; }
+	case 30: {const std::string& numToPrint = "30"; std::cerr << numToPrint; break; }
+	case 31: {const std::string& numToPrint = "31"; std::cerr << numToPrint; break; }
+	case 32: {const std::string& numToPrint = "32"; std::cerr << numToPrint; break; }
+	case 33: {const std::string& numToPrint = "33"; std::cerr << numToPrint; break; }
+	case 34: {const std::string& numToPrint = "34"; std::cerr << numToPrint; break; }
+	case 35: {const std::string& numToPrint = "35"; std::cerr << numToPrint; break; }
+	case 36: {const std::string& numToPrint = "36"; std::cerr << numToPrint; break; }
+	case 37: {const std::string& numToPrint = "37"; std::cerr << numToPrint; break; }
+	case 38: {const std::string& numToPrint = "38"; std::cerr << numToPrint; break; }
+	case 39: {const std::string& numToPrint = "39"; std::cerr << numToPrint; break; }
+	case 40: {const std::string& numToPrint = "40"; std::cerr << numToPrint; break; }
+	case 41: {const std::string& numToPrint = "41"; std::cerr << numToPrint; break; }
+	case 42: {const std::string& numToPrint = "42"; std::cerr << numToPrint; break; }
+	case 43: {const std::string& numToPrint = "43"; std::cerr << numToPrint; break; }
+	case 44: {const std::string& numToPrint = "44"; std::cerr << numToPrint; break; }
+	case 45: {const std::string& numToPrint = "45"; std::cerr << numToPrint; break; }
+	case 46: {const std::string& numToPrint = "46"; std::cerr << numToPrint; break; }
+	case 47: {const std::string& numToPrint = "47"; std::cerr << numToPrint; break; }
+	case 48: {const std::string& numToPrint = "48"; std::cerr << numToPrint; break; }
+	case 49: {const std::string& numToPrint = "49"; std::cerr << numToPrint; break; }
+	case 50: {const std::string& numToPrint = "50"; std::cerr << numToPrint; break; }
+	case 51: {const std::string& numToPrint = "51"; std::cerr << numToPrint; break; }
+	case 52: {const std::string& numToPrint = "52"; std::cerr << numToPrint; break; }
+	case 53: {const std::string& numToPrint = "53"; std::cerr << numToPrint; break; }
+	case 54: {const std::string& numToPrint = "54"; std::cerr << numToPrint; break; }
+	case 55: {const std::string& numToPrint = "55"; std::cerr << numToPrint; break; }
+	case 56: {const std::string& numToPrint = "56"; std::cerr << numToPrint; break; }
+	case 57: {const std::string& numToPrint = "57"; std::cerr << numToPrint; break; }
+	case 58: {const std::string& numToPrint = "58"; std::cerr << numToPrint; break; }
+	case 59: {const std::string& numToPrint = "59"; std::cerr << numToPrint; break; }
+	case 60: {const std::string& numToPrint = "60"; std::cerr << numToPrint; break; }
+	default: {const std::string& numToPrint = "?"; std::cerr << numToPrint; break; }
+	}
+}
+
+
+//replaces Serial..println(str)
+void logln(const std::string& text) {
+	std::cerr << text << std::endl;
+}
+
+
+//replaces Serial..println(int)
+void logln(int num) {
+
+	//const std::string& numToPrint="Hello";
+	//this is a dumb way to do this, but it's because of difficulty converting int->string
+	switch (num) {
+	case 0: {const std::string& numToPrint = "0"; std::cerr << numToPrint; break; }
+	case 1: {const std::string& numToPrint = "1"; std::cerr << numToPrint; break; }
+	case 2: {const std::string& numToPrint = "2"; std::cerr << numToPrint; break; }
+	case 3: {const std::string& numToPrint = "3"; std::cerr << numToPrint; break; }
+	case 4: {const std::string& numToPrint = "4"; std::cerr << numToPrint; break; }
+	case 5: {const std::string& numToPrint = "5"; std::cerr << numToPrint; break; }
+	case 6: {const std::string& numToPrint = "6"; std::cerr << numToPrint; break; }
+	case 7: {const std::string& numToPrint = "7"; std::cerr << numToPrint; break; }
+	case 8: {const std::string& numToPrint = "8"; std::cerr << numToPrint; break; }
+	case 9: {const std::string& numToPrint = "9"; std::cerr << numToPrint; break; }
+	case 10: {const std::string& numToPrint = "10"; std::cerr << numToPrint; break; }
+	case 11: {const std::string& numToPrint = "11"; std::cerr << numToPrint; break; }
+	case 12: {const std::string& numToPrint = "12"; std::cerr << numToPrint; break; }
+	case 13: {const std::string& numToPrint = "13"; std::cerr << numToPrint; break; }
+	case 14: {const std::string& numToPrint = "14"; std::cerr << numToPrint; break; }
+	case 15: {const std::string& numToPrint = "15"; std::cerr << numToPrint; break; }
+	case 16: {const std::string& numToPrint = "16"; std::cerr << numToPrint; break; }
+	case 17: {const std::string& numToPrint = "17"; std::cerr << numToPrint; break; }
+	case 18: {const std::string& numToPrint = "18"; std::cerr << numToPrint; break; }
+	case 19: {const std::string& numToPrint = "19"; std::cerr << numToPrint; break; }
+	case 20: {const std::string& numToPrint = "20"; std::cerr << numToPrint; break; }
+	case 21: {const std::string& numToPrint = "21"; std::cerr << numToPrint; break; }
+	case 22: {const std::string& numToPrint = "22"; std::cerr << numToPrint; break; }
+	case 23: {const std::string& numToPrint = "23"; std::cerr << numToPrint; break; }
+	case 24: {const std::string& numToPrint = "24"; std::cerr << numToPrint; break; }
+	case 25: {const std::string& numToPrint = "25"; std::cerr << numToPrint; break; }
+	case 26: {const std::string& numToPrint = "26"; std::cerr << numToPrint; break; }
+	case 27: {const std::string& numToPrint = "27"; std::cerr << numToPrint; break; }
+	case 28: {const std::string& numToPrint = "28"; std::cerr << numToPrint; break; }
+	case 29: {const std::string& numToPrint = "29"; std::cerr << numToPrint; break; }
+	case 30: {const std::string& numToPrint = "30"; std::cerr << numToPrint; break; }
+	case 31: {const std::string& numToPrint = "31"; std::cerr << numToPrint; break; }
+	case 32: {const std::string& numToPrint = "32"; std::cerr << numToPrint; break; }
+	case 33: {const std::string& numToPrint = "33"; std::cerr << numToPrint; break; }
+	case 34: {const std::string& numToPrint = "34"; std::cerr << numToPrint; break; }
+	case 35: {const std::string& numToPrint = "35"; std::cerr << numToPrint; break; }
+	case 36: {const std::string& numToPrint = "36"; std::cerr << numToPrint; break; }
+	case 37: {const std::string& numToPrint = "37"; std::cerr << numToPrint; break; }
+	case 38: {const std::string& numToPrint = "38"; std::cerr << numToPrint; break; }
+	case 39: {const std::string& numToPrint = "39"; std::cerr << numToPrint; break; }
+	case 40: {const std::string& numToPrint = "40"; std::cerr << numToPrint; break; }
+	case 41: {const std::string& numToPrint = "41"; std::cerr << numToPrint; break; }
+	case 42: {const std::string& numToPrint = "42"; std::cerr << numToPrint; break; }
+	case 43: {const std::string& numToPrint = "43"; std::cerr << numToPrint; break; }
+	case 44: {const std::string& numToPrint = "44"; std::cerr << numToPrint; break; }
+	case 45: {const std::string& numToPrint = "45"; std::cerr << numToPrint; break; }
+	case 46: {const std::string& numToPrint = "46"; std::cerr << numToPrint; break; }
+	case 47: {const std::string& numToPrint = "47"; std::cerr << numToPrint; break; }
+	case 48: {const std::string& numToPrint = "48"; std::cerr << numToPrint; break; }
+	case 49: {const std::string& numToPrint = "49"; std::cerr << numToPrint; break; }
+	case 50: {const std::string& numToPrint = "50"; std::cerr << numToPrint; break; }
+	case 51: {const std::string& numToPrint = "51"; std::cerr << numToPrint; break; }
+	case 52: {const std::string& numToPrint = "52"; std::cerr << numToPrint; break; }
+	case 53: {const std::string& numToPrint = "53"; std::cerr << numToPrint; break; }
+	case 54: {const std::string& numToPrint = "54"; std::cerr << numToPrint; break; }
+	case 55: {const std::string& numToPrint = "55"; std::cerr << numToPrint; break; }
+	case 56: {const std::string& numToPrint = "56"; std::cerr << numToPrint; break; }
+	case 57: {const std::string& numToPrint = "57"; std::cerr << numToPrint; break; }
+	case 58: {const std::string& numToPrint = "58"; std::cerr << numToPrint; break; }
+	case 59: {const std::string& numToPrint = "59"; std::cerr << numToPrint; break; }
+	case 60: {const std::string& numToPrint = "60"; std::cerr << numToPrint; break; }
+	default: {const std::string& numToPrint = "?"; std::cerr << numToPrint; break; }
+	}
+
+	std::cerr << std::endl;
+}
+
+//replaces Serial..println()
+void logln() {
+	std::cerr << std::endl << std::endl;
+}
+
+//write the values of each cell onto the simulation maze
+void printCellValues();
+
+
+
+// *******************-----------------------------**********************
+// ***************| END OF SIMULATION-ONLY FUNCTIONS |*******************
+// *******************-----------------------------**********************
+
+
+#include "StackArray.h"
+
+
+
+
+
+int m1Duty = 60; int m2Duty = 60; int mDuty = 60;   // for adjusting duty cycle, m1 stays constant & m2 adjusts to match
+					  // minimum duty cycle: 25
+int cellDistance = 18;    // in cm
+int targetEncoderCount;
+bool hasMovedFwd = false, hasTurnedLeft = false, hasTurnedRight = false;
+bool plsMoveToCenter = false;
+
+void moveNorth();
+void moveSouth();
+void moveEast();
+void moveWest();
+
+int theta = 90;
+unsigned long lastTime = 0;
+
+struct MazeCell {   // Struct holds maze coordinates (x,y) and the corresponding cell value (distance)
+	int xStack;
+	int yStack;
+	int cellValue;
+
+	bool hasNWall;
+	bool hasSWall;
+	bool hasWWall;
+	bool hasEWall;
+
+	void clearData();
+};
+
+void MazeCell::clearData() {
+	xStack = 0;
+	yStack = 0;
+	cellValue = 0;
+
+	hasNWall = false;
+	hasSWall = false;
+	hasWWall = false;
+	hasEWall = false;
+}
+
+StackArray <MazeCell> floodFillStack;   // holds a stack of type Mazecell
+
+// micromouse would start at maze[4][0]
+
+bool isInStack[16][16] = { false };
+
+MazeCell currentPush;                     // to push current
+MazeCell currentLocation = { 15, 0, 14, false, true, true, true };   // current location of robot
+MazeCell currentPop;                      // to read top of stack
+MazeCell updateXYPeek;                    // peek top of the stack for updating xVirtual and yVirtual
+MazeCell adjacentCell[4];               // array to store adjacent cells and their information
+MazeCell currentLocAdj[4];                //*** Consider moving declaration to main() (variable isn't used anywhere else)
+MazeCell nextLocation;                  //*** Consider moving declaration to main() (variable isn't used anywhere else)
+MazeCell maze[16][16];
+
+int currentLocAdjCellValue[4];              //*** Consider renaming and moving declaration to main() (variable isn't used anywhere else)
+int adjacentVal[4];         // array to store adjacent cell value
+int md = 12;                       // minimum distance of adjacent cells
+int top, bottom, left, right;
+int x = 15;                        // current location looking at in the stack (ROW)
+int y = 0;                        // current location looking at in the stack (COL)
+int xVirtual = 14, yVirtual = 0;   // current x and y location of cell to be analyzed
+				  // (first occurrence is at [3][0]
+int xNext = 13, yNext = 0;               //*** Consider moving declaration to main() (variable isn't used anywhere else)
+int arrayCounter = 0;             // counts array size for finding md
+int j;                          //*** Consider moving declaration to main() (variable isn't used anywhere else)
+int currentLocMD = 12;                 //*** Consider moving declaration to main() (variable isn't used anywhere else)
+int tempX, tempY;                   //*** Consider deleting declaration (variable is never used)
+bool isAtCenter = false, stackIsEmpty = true, northIsOpen = true, southIsOpen = true, eastIsOpen = true, westIsOpen = true;
+bool frontIsOpen = true;
+bool isMovingBack = false;
+
+// **********************************************************************
+// **********************************************************************
+// **********************----------------------**************************
+// **********************| MOVEMENT FUNCTIONS |**************************
+// **********************----------------------**************************
+// **********************************************************************
+// **********************************************************************
+
+void moveFwd(float numCells, int dutyCycleM1, int dutyCycleM2) {
+
+	API::moveForward();
+
+	hasMovedFwd = true;
+}
+
+void turnLeft(int dutyCycleM1, int dutyCycleM2) {
+	theta = theta + 90;
+	if (theta == 360)
+		theta = theta - 360;
+
+	API::turnLeft();
+
+	hasTurnedLeft = true;
+}
+
+
+// Turn the Mouse Right
+void turnRight(int dutyCycleM1, int dutyCycleM2) {
+	theta = theta - 90;
+	if (theta < 0)
+		theta = theta + 360;
+
+	API::turnRight();
+
+
+	hasTurnedRight = true;
+}
+
+void turn180Deg(int dutyCycleM1, int dutyCycleM2) {   // this rotates 180 degrees clockwise 
+
+	API::turnLeft();
+	API::turnLeft();
+}
+
+void move(bool isMovingBack) {
+	// west cell; move west
+	if (yNext == currentLocation.yStack - 1) {
+		if (theta == 0) {     // theta = 0
+			turnLeft(mDuty, mDuty);
+
+			turnLeft(mDuty, mDuty);
+
+		}
+		else if (theta == 90) {   // theta = 90
+			turnLeft(mDuty, mDuty);
+
+		}
+		else if (theta == 180) {  // theta = 180
+		// do not turn
+		}
+		else {                    // theta = 270  
+			turnRight(mDuty, mDuty);
+
+		}
+		moveFwd(1, mDuty, mDuty);
+		moveWest();
+		eastIsOpen = true;
+	}
+
+	// east cell; move east
+	else if (yNext == currentLocation.yStack + 1) {
+		if (theta == 0) {     // theta = 0
+		  //do not turn
+		}
+		else if (theta == 90) {   // theta = 90
+			turnRight(mDuty, mDuty);
+
+		}
+		else if (theta == 180) {  // theta = 180
+			turnLeft(mDuty, mDuty);
+
+			turnLeft(mDuty, mDuty);
+
+		}
+		else {                    // theta = 270  
+			turnLeft(mDuty, mDuty);
+
+		}
+		moveFwd(1, mDuty, mDuty);
+		moveEast();
+		westIsOpen = true;
+	}
+
+	// x doesn't change; y changes
+	else {
+		// north cell; move north
+		if (xNext == currentLocation.xStack - 1) {
+			if (theta == 0) {     // theta = 0            
+				turnLeft(mDuty, mDuty);
+
+			}
+			else if (theta == 90) {   // theta = 90
+			  // do not turn
+			}
+			else if (theta == 180) {  // theta = 180
+				turnRight(mDuty, mDuty);
+
+			}
+			else {            // theta = 270    
+				turnLeft(mDuty, mDuty);
+
+				turnLeft(mDuty, mDuty);
+
+			}
+			moveFwd(1, mDuty, mDuty);
+			moveNorth();
+			southIsOpen = true;
+		}
+
+		// south cell; move south
+		else if (xNext == currentLocation.xStack + 1) {
+			if (theta == 0) {     // theta = 0            
+				turnRight(mDuty, mDuty);
+
+			}
+			else if (theta == 90) {   // theta = 90           
+				turnLeft(mDuty, mDuty);
+
+				turnLeft(mDuty, mDuty);
+
+			}
+			else if (theta == 180) {  // theta = 180            
+				turnLeft(mDuty, mDuty);
+
+			}
+			else {            // theta = 270            
+			  // do not turn
+			}
+			moveFwd(1, mDuty, mDuty);
+			moveSouth();
+			northIsOpen = true;
+		}
+	}
+	if (!isMovingBack) {
+		//Path.push(currentLocation);
+		// end of movement
+	}
+}
+
+void findMin() {
+	for (int i = 0; i < j; i++) {
+		if (currentLocAdjCellValue[i] < currentLocMD) {
+			currentLocMD = currentLocAdjCellValue[i];
+			nextLocation = currentLocAdj[i];
+			//logln("THIS IF STATEMENT HAS BEEN EXECUTED");
+		}
+		xNext = nextLocation.xStack;
+		yNext = nextLocation.yStack;
+
+		//log("CurrentLocAdj[");
+		//log(i);
+		//log("]: x=");
+		//log(currentLocAdj[i].xStack);
+		//log(", y=");
+		//log(currentLocAdj[i].yStack);
+		//log(", cell value=");
+		//logln(currentLocAdj[i].cellValue);
+		//log("currentLocMD = ");
+		//logln(currentLocMD);
+	}
+}
+
+void checkCells() {
+	if (((x - 1 >= 0) && (x - 1 <= 15)) && !(maze[x][y].hasNWall)) {    // check north cell
+		//logln("Adjacent North Cell found.");
+		currentLocAdj[j] = { x - 1, y, maze[x - 1][y].cellValue };
+		currentLocAdjCellValue[j] = maze[x - 1][y].cellValue;
+		j++;
+	}
+
+	if (((x + 1 >= 0) && (x + 1 <= 15)) && !(maze[x][y].hasSWall)) {    // check south cell
+		//logln("Adjacent South Cell found.");
+		currentLocAdj[j] = { x + 1, y, maze[x + 1][y].cellValue };
+		currentLocAdjCellValue[j] = maze[x + 1][y].cellValue;
+		j++;
+	}
+
+	if (((y - 1 >= 0) && (y - 1 <= 15)) && !(maze[x][y].hasWWall)) {     // check west cell
+		//logln("Adjacent West Cell found.");
+		currentLocAdj[j] = { x, y - 1, maze[x][y - 1].cellValue };
+		currentLocAdjCellValue[j] = maze[x][y - 1].cellValue;
+		j++;
+	}
+
+	if (((y + 1 >= 0) && (y + 1 <= 15)) && !(maze[x][y].hasEWall)) {     // check east cell
+		//logln("Adjacent East Cell found.");
+		currentLocAdj[j] = { x, y + 1, maze[x][y + 1].cellValue };
+		currentLocAdjCellValue[j] = maze[x][y + 1].cellValue;
+		j++;
+	}
+}
+
+// *******************-----------------------------**********************
+// *******************| END OF MOVEMENT FUNCTIONS |**********************
+// *******************-----------------------------**********************
+
+
+
+// sense walls with IR sensors
+void senseWalls(int theta) {
+	// Read the input on ana//log pin
+	/*int leftSensorValue = ana//logRead(IR_LEFT_PIN);
+	int rightSensorValue = ana//logRead(IR_RIGHT_PIN);
+	int frontSensorValue = ana//logRead(IR_FRONT_PIN);*/
+
+	//  //log("Left IR Value (raw): ");
+	//  //log(leftSensorValue);
+	//
+	//  //log("Right IR Value (raw): ");
+	//  //log(rightSensorValue);
+	//
+	//  //log("Front IR Value (raw): ");
+	//  //log(frontSensorValue);
+	//
+	//  //log();
+
+	switch (theta) {
+		// mouse facing east
+	case 0:
+		northIsOpen = (API::wallLeft()) ? false : true; // these bools are with respect to global frame
+		eastIsOpen = (API::wallFront()) ? false : true;
+		southIsOpen = (API::wallRight()) ? false : true;
+		westIsOpen = true;
+		break;
+
+		// mouse facing north
+	case 90:
+		northIsOpen = (API::wallFront()) ? false : true;
+		eastIsOpen = (API::wallRight()) ? false : true;
+		southIsOpen = true;
+		westIsOpen = (API::wallLeft()) ? false : true;
+		break;
+
+		// mouse facing west
+	case 180:
+		northIsOpen = (API::wallRight()) ? false : true;
+		eastIsOpen = true;
+		southIsOpen = (API::wallLeft()) ? false : true;
+		westIsOpen = (API::wallFront()) ? false : true;
+		break;
+
+		// mouse facing south
+	case 270:
+		northIsOpen = true;
+		eastIsOpen = (API::wallLeft()) ? false : true;
+		southIsOpen = (API::wallFront()) ? false : true;
+		westIsOpen = (API::wallRight()) ? false : true;
+		break;
+	}
+
+	// assign walls to cell
+	maze[x][y].hasNWall = !northIsOpen;
+	maze[x][y].hasSWall = !southIsOpen;
+	maze[x][y].hasWWall = !westIsOpen;
+	maze[x][y].hasEWall = !eastIsOpen;
+
+	// assign walls to adjacent cells (ex. current cell north wall = above cell south wall)
+	if (y >= 1) {
+		maze[x][y - 1].hasEWall = !westIsOpen;
+	}
+	if (y <= 14) {
+		maze[x][y + 1].hasWWall = !eastIsOpen;
+	}
+	if (x >= 1) {
+		maze[x - 1][y].hasSWall = !northIsOpen;
+	}
+	if (x <= 14) {
+		maze[x + 1][y].hasNWall = !southIsOpen;
+	}
+}
+
+
+// **********************************************************************
+// **********************************************************************
+// ******************-------------------------------*********************
+// ******************| MOVEMENT TRACKING FUNCTIONS |*********************
+// ******************-------------------------------*********************
+// **********************************************************************
+// **********************************************************************
+
+void moveNorth() {
+	//logln("Moving north.");
+	currentLocation.xStack--;
+	currentLocation.cellValue = maze[currentLocation.xStack][y].cellValue;
+	x--;
+	xVirtual = x;
+}
+
+void moveSouth() {
+	//logln("Moving south.");
+	currentLocation.xStack++;
+	currentLocation.cellValue = maze[currentLocation.xStack][y].cellValue;
+	x++;
+	xVirtual = x;
+}
+
+void moveWest() {
+	//logln("Moving west.");
+	currentLocation.yStack--;
+	currentLocation.cellValue = maze[x][currentLocation.yStack].cellValue;
+	y--;
+	yVirtual = y;
+}
+
+void moveEast() {
+	//logln("Moving east.");
+	currentLocation.yStack++;
+	currentLocation.cellValue = maze[x][currentLocation.yStack].cellValue;
+	y++;
+	yVirtual = y;
+}
+
+// ***************--------------------------------------*****************
+// ***************| END OF MOVEMENT TRACKING FUNCTIONS |*****************
+// ***************--------------------------------------*****************
+
+
+// **********************************************************************
+// **********************************************************************
+// **********************************************************************
+// **********************************************************************
+// *********************---------------------------**********************
+// *********************| MAIN FLOODFILL FUNCTION |**********************
+// *********************---------------------------**********************
+// **********************************************************************
+// **********************************************************************
+// **********************************************************************
+// **********************************************************************
+
+void floodFill(bool stackIsEmpty) {
+	currentPush = { xVirtual, yVirtual, maze[xVirtual][yVirtual].cellValue, maze[xVirtual][yVirtual].hasNWall,
+			maze[xVirtual][yVirtual].hasSWall, maze[xVirtual][yVirtual].hasWWall, maze[xVirtual][yVirtual].hasEWall };
+	//log("Current Push: x=");
+	//log(currentPush.xStack);
+	//log(", y=");
+	//log(currentPush.yStack);
+	//log(", cell value=");
+	//logln(currentPush.cellValue);
+
+	if (stackIsEmpty) {                       // only true for the 1st time
+		floodFillStack.push(currentPush);             // push current physical cell location
+		isInStack[currentPush.xStack][currentPush.yStack] = true;   // for boolean maze array
+	}
+
+	currentPop = floodFillStack.pop();                // pop    
+	//log("Current Pop: x=");
+	//log(currentPop.xStack);
+	//log(", y=");
+	//log(currentPop.yStack);
+	//log(", cell value=");
+	//logln(currentPop.cellValue);
+	isInStack[currentPop.xStack][currentPop.yStack] = false;
+
+	MazeCell top = { xVirtual - 1, yVirtual, maze[xVirtual - 1][yVirtual].cellValue, maze[xVirtual - 1][yVirtual].hasNWall,
+			maze[xVirtual - 1][yVirtual].hasSWall, maze[xVirtual - 1][yVirtual].hasWWall, maze[xVirtual - 1][yVirtual].hasEWall };
+
+	MazeCell bottom = { xVirtual + 1, yVirtual, maze[xVirtual + 1][yVirtual].cellValue, maze[xVirtual + 1][yVirtual].hasNWall,
+			maze[xVirtual + 1][yVirtual].hasSWall, maze[xVirtual + 1][yVirtual].hasWWall, maze[xVirtual + 1][yVirtual].hasEWall };
+
+	MazeCell left = { xVirtual, yVirtual - 1, maze[xVirtual][yVirtual - 1].cellValue, maze[xVirtual][yVirtual - 1].hasNWall,
+			maze[xVirtual][yVirtual - 1].hasSWall, maze[xVirtual][yVirtual - 1].hasWWall, maze[xVirtual][yVirtual - 1].hasEWall };
+
+	MazeCell right = { xVirtual, yVirtual + 1, maze[xVirtual][yVirtual + 1].cellValue, maze[xVirtual][yVirtual + 1].hasNWall,
+			maze[xVirtual][yVirtual + 1].hasSWall, maze[xVirtual][yVirtual + 1].hasWWall, maze[xVirtual][yVirtual + 1].hasEWall };
+
+	//if ((xVirtual - 1 == 8 && (yVirtual == 7 || yVirtual == 8)) && !maze[xVirtual][yVirtual].hasNWall) {		// going to center from  bottom cells)
+	//	plsMoveToCenter = true;
+	//	xNext = xVirtual - 1;
+	//	yNext = yVirtual;
+	//	goto endFloodFill;
+	//}
+
+	if (((xVirtual - 1 >= 0) && (xVirtual - 1 <= 15)) && (maze[xVirtual - 1][yVirtual].cellValue != 0) && !maze[xVirtual][yVirtual].hasNWall && !isInStack[xVirtual][yVirtual]) {   // adjacent OPEN top cell
+		adjacentCell[arrayCounter] = top;               // these are arrays
+		adjacentVal[arrayCounter] = top.cellValue;    // these are arrays
+		arrayCounter++;
+		//log("Top cell will be compared: ");
+		//log(xVirtual - 1);
+		//log(",");
+		//log(yVirtual);
+		//logln();
+		//log("Array counter: ");
+		//log(arrayCounter);
+		//logln();
+	}
+
+	//if ((xVirtual + 1 == 7 && (yVirtual == 7 || yVirtual == 8)) && !maze[xVirtual][yVirtual].hasSWall) {		// going to center from  top cells
+	//	plsMoveToCenter = true;
+	//	xNext = xVirtual + 1;
+	//	yNext = yVirtual;
+	//	goto endFloodFill;
+	//}
+
+	if (((xVirtual + 1 >= 0) && (xVirtual + 1 <= 15)) && (maze[xVirtual + 1][yVirtual].cellValue != 0) && !maze[xVirtual][yVirtual].hasSWall && !isInStack[xVirtual][yVirtual]) {   // adjacent OPEN bottom cell
+		adjacentCell[arrayCounter] = bottom;
+		adjacentVal[arrayCounter] = bottom.cellValue;
+		arrayCounter++;
+		//log("Bottom cell will be compared: ");
+		//log(xVirtual + 1);
+		//log(",");
+		//log(yVirtual);
+		//logln();
+		//log("Array counter: ");
+		//log(arrayCounter);
+		//logln();
+	}
+
+	//if (((xVirtual == 7 || xVirtual == 8) && yVirtual - 1 == 8) && !maze[xVirtual][yVirtual].hasWWall) {		// going to center from right cells
+	//	plsMoveToCenter = true;
+	//	xNext = xVirtual;
+	//	yNext = yVirtual - 1;
+	//	goto endFloodFill;
+	//}
+
+	if (((yVirtual - 1 >= 0) && (yVirtual - 1 <= 15)) && (maze[xVirtual][yVirtual - 1].cellValue != 0) && !maze[xVirtual][yVirtual].hasWWall && !isInStack[xVirtual][yVirtual]) {    // adjacent OPEN left cell
+		adjacentCell[arrayCounter] = left;
+		adjacentVal[arrayCounter] = left.cellValue;
+		arrayCounter++;
+		//log("Left cell will be compared: ");
+		//log(xVirtual);
+		//log(",");
+		//log(yVirtual - 1);
+		//logln();
+		//log("Array counter: ");
+		//log(arrayCounter);
+		//logln();
+	}
+
+	//if (((xVirtual == 7 || xVirtual == 8) && yVirtual + 1 == 7) && !maze[xVirtual][yVirtual].hasEWall) {		// going to center from left cells
+	//	plsMoveToCenter = true;
+	//	xNext = xVirtual;
+	//	yNext = yVirtual + 1;
+	//	goto endFloodFill;
+	//}
+
+	if (((yVirtual + 1 >= 0) && (yVirtual + 1 <= 15)) && (maze[xVirtual][yVirtual + 1].cellValue != 0) && !maze[xVirtual][yVirtual].hasEWall && !isInStack[xVirtual][yVirtual]) {    // adjacent OPEN right cell
+		adjacentCell[arrayCounter] = right;
+		adjacentVal[arrayCounter] = right.cellValue;
+		arrayCounter++;
+		//log("Right cell will be compared: ");
+		//log(xVirtual);
+		//log(",");
+		//log(yVirtual + 1);
+		//logln();
+		//log("Array counter: ");
+		//log(arrayCounter);
+		//logln();
+	}
+
+	md = adjacentVal[0]; // sets md to first vector value
+
+	// find minimum value (distance) of adjacent cells
+	for (int i = 0; i < arrayCounter; i++) {
+		if (adjacentVal[i] < md) {
+			md = adjacentVal[i];
+			//log("md in for loop: ");
+			//log(md);
+			//logln();
+		}
+	}
+
+	//log("New md: ");
+	//log(md);
+	//logln();
+
+	// *********************************************
+	// *********************************************
+	// *********************************************
+	// *********************************************
+	// *********************************************
+	// **********ACTUAL START OF FLOODFILL**********
+	// *****************(RECURSION)*****************
+	// *********************************************
+	// *********************************************
+	// *********************************************
+	// *********************************************
+
+	if (currentPop.cellValue - 1 != md) {
+
+		maze[currentPop.xStack][currentPop.yStack].cellValue = md + 1; // update current cell value
+		//log("New Cell Value: ");
+		//log(maze[currentPop.xStack][currentPop.yStack].cellValue);
+		//logln();
+
+		for (int i = 0; i < arrayCounter; i++) {    // push all adjacent squares into stack
+			if (adjacentVal[i] != 0) {      //*** THIS IF STATEMENT IS UNNECESSARY? (already checks if it's center cell above, line 430)
+				floodFillStack.push(adjacentCell[i]);
+				isInStack[adjacentCell[i].xStack][adjacentCell[i].yStack] = true;
+				//log("Pushing values into stack: i = ");
+				//log(i);
+
+				//logln();
+			}
+		}
+	}
+
+	stackIsEmpty = floodFillStack.isEmpty();
+
+	if (!stackIsEmpty) {
+		updateXYPeek = floodFillStack.peek(); // getting x and y for next recursion
+		xVirtual = updateXYPeek.xStack;
+		//log("xVirtual: ");
+		//log(xVirtual);
+		//logln();
+		yVirtual = updateXYPeek.yStack;
+		//log("yVirtual: ");
+		//log(yVirtual);
+		//logln();
+
+		// reset all array values for next recursion    
+		for (int i = 0; i < 4; i++) {
+			adjacentCell[i].clearData();
+		}
+
+		for (int i = 0; i < 4; i++) {
+			adjacentVal[i] = 0;
+		}
+
+		arrayCounter = 0;
+
+		floodFill(stackIsEmpty);
+	}
+
+endFloodFill:
+
+	// reset all array values for next recursion    
+	for (int i = 0; i < 4; i++) {
+		adjacentCell[i].clearData();
+	}
+
+	for (int i = 0; i < 4; i++) {
+		adjacentVal[i] = 0;
+	}
+
+	arrayCounter = 0;
+}
+
+// *******************-----------------------------*********************
+// *******************| END OF FLOODFILL FUNCTION |*********************
+// *******************-----------------------------*********************
+
+
+
+int main(int argc, char* argv[]) {
+	//log("Running...");
+
+
+	// disgusting
+	// initial cell values for maze distance to center
+	// STILL NEEDS TESTING
+	int offset;
+	for (int i = 0; i < 16; i++) {
+		if (i < 8)
+			offset = i;
+		else
+			offset = 15 - i;
+
+
+		for (int j = 0; j < 16; j++) {
+			if (j < 8)
+				maze[i][j].cellValue = 14 - j - offset;
+			else
+				maze[i][j].cellValue = j - 1 - offset;
+		}
+	}
+
+
+
+	//LOOP
+	while (1) {
+		// main code; runs repeatedly
+
+
+		//// Reset to the default values if the battery level is lower than 11V
+		//if (batteryVoltage < 8) {
+		//	//log(" ");
+		//	//log("WARNING: LOW BATTERY");
+		//	//log("ALL SYSTEMS DOWN");
+		//	
+		//	while (batteryVoltage < 8) {
+		//		batteryVoltage = (float)battery.getConverted();
+		//	}
+		//}
+		//else {
+
+			// create empty stack to record movements from start position
+		moveFwd(1, mDuty, mDuty); // 1 cell 
+		moveNorth();        // update first movement
+		//log("Current location: ");
+		//log(xVirtual);
+		//log(", ");
+		//log(yVirtual);
+		//logln();
+
+		// all movements after the initial one
+		while (isAtCenter == false) {
+
+			xVirtual = x;   // in Floodfill function, x and y coordinates are all virtual
+			yVirtual = y;
+			md = currentLocMD;
+
+			//  // wait to let micromouse settle down, get good reading from IR sensors
+
+			// Sense walls
+			//logln("Sensing walls...");
+			senseWalls(theta);
+
+			//logln("floodfill maze #'s (before floodfill):");
+			for (int i = 0; i < 16; i++) {
+				for (int j = 0; j < 16; j++) {
+					//log(maze[i][j].cellValue);
+					//log(" ");
+				}
+				//logln();
+			}
+
+			//logln("*********************");
+
+			//logln("Executing flood-fill");
+			floodFill(true);
+
+			//SIMULATION-ONLY: prints floodfill values on each cell
+			printCellValues();
+
+			if (plsMoveToCenter) {
+				goto moveFunc;
+			}
+
+
+			// determine where cell with md is
+			//logln("Finding minimum distance of open neighbors");
+			j = 0;
+
+			// beginning of cell checking for cell w/ md
+			checkCells();
+
+			//log("j (# of adjacent cells to check) = ");
+			//log(j);
+			//logln();
+
+			currentLocMD = currentLocAdjCellValue[0];   // sets md to first array value
+			nextLocation = currentLocAdj[0];
+
+			// find minimum value (distance) of adjacent cells
+			findMin();
+
+			for (int i = 0; i < 4; i++) {
+				currentLocAdjCellValue[i] = 500; // reset cell values
+			}
+
+		moveFunc:
+			// x changes; y doesn't change
+			//logln("Executing movement based on md");
+			move(isMovingBack);
+
+			// check if robot reached center
+			if (currentLocation.cellValue == 0) {
+				isAtCenter = true;
+				//logln("Reached the center!!");
+				isMovingBack = true;
+				//backTrack();
+			}
+		}
+
+		// You made it to the center, congratulations! You can take a break :)
+		while (1);
+
+	}
+
+
+}
+
+
+
+
+
+
+void printCellValues() {
+	for (int i = 0; i < 16; i++) {
+		for (int j = 0; j < 16; j++) {
+
+
+			int num = maze[15 - j][i].cellValue;
+
+
+			//NOTE: STD:TO_STRING DOES NOT WORK WITH MINGW
+			//std::string num_string = std::to_string(num);
+
+
+			//this is a dumb way to do this, but it's because of difficulty converting int->string
+			switch (num) {
+			case 0: {API::setText(i, j, "0"); break; }
+			case 1: {API::setText(i, j, "1"); break; }
+			case 2: {API::setText(i, j, "2"); break; }
+			case 3: {API::setText(i, j, "3"); break; }
+			case 4: {API::setText(i, j, "4"); break; }
+			case 5: {API::setText(i, j, "5"); break; }
+			case 6: {API::setText(i, j, "6"); break; }
+			case 7: {API::setText(i, j, "7"); break; }
+			case 8: {API::setText(i, j, "8"); break; }
+			case 9: {API::setText(i, j, "9"); break; }
+			case 10: {API::setText(i, j, "10"); break; }
+			case 11: {API::setText(i, j, "11"); break; }
+			case 12: {API::setText(i, j, "12"); break; }
+			case 13: {API::setText(i, j, "13"); break; }
+			case 14: {API::setText(i, j, "14"); break; }
+			case 15: {API::setText(i, j, "15"); break; }
+			case 16: {API::setText(i, j, "16"); break; }
+			case 17: {API::setText(i, j, "17"); break; }
+			case 18: {API::setText(i, j, "18"); break; }
+			case 19: {API::setText(i, j, "19"); break; }
+			case 20: {API::setText(i, j, "20"); break; }
+			case 21: {API::setText(i, j, "21"); break; }
+			case 22: {API::setText(i, j, "22"); break; }
+			case 23: {API::setText(i, j, "23"); break; }
+			case 24: {API::setText(i, j, "24"); break; }
+			case 25: {API::setText(i, j, "25"); break; }
+			case 26: {API::setText(i, j, "26"); break; }
+			case 27: {API::setText(i, j, "27"); break; }
+			case 28: {API::setText(i, j, "28"); break; }
+			case 29: {API::setText(i, j, "29"); break; }
+			case 30: {API::setText(i, j, "20"); break; }
+			case 31: {API::setText(i, j, "31"); break; }
+			case 32: {API::setText(i, j, "32"); break; }
+			case 33: {API::setText(i, j, "33"); break; }
+			case 34: {API::setText(i, j, "34"); break; }
+			case 35: {API::setText(i, j, "35"); break; }
+			case 36: {API::setText(i, j, "36"); break; }
+			case 37: {API::setText(i, j, "37"); break; }
+			case 38: {API::setText(i, j, "38"); break; }
+			case 39: {API::setText(i, j, "39"); break; }
+			case 40: {API::setText(i, j, "40"); break; }
+			case 41: {API::setText(i, j, "41"); break; }
+			case 42: {API::setText(i, j, "42"); break; }
+			case 43: {API::setText(i, j, "43"); break; }
+			case 44: {API::setText(i, j, "44"); break; }
+			case 45: {API::setText(i, j, "45"); break; }
+			case 46: {API::setText(i, j, "46"); break; }
+			case 47: {API::setText(i, j, "47"); break; }
+			case 48: {API::setText(i, j, "48"); break; }
+			case 49: {API::setText(i, j, "49"); break; }
+			case 50: {API::setText(i, j, "50"); break; }
+			case 51: {API::setText(i, j, "51"); break; }
+			case 52: {API::setText(i, j, "52"); break; }
+			case 53: {API::setText(i, j, "53"); break; }
+			case 54: {API::setText(i, j, "54"); break; }
+			case 55: {API::setText(i, j, "55"); break; }
+			case 56: {API::setText(i, j, "56"); break; }
+			case 57: {API::setText(i, j, "57"); break; }
+			case 58: {API::setText(i, j, "58"); break; }
+			case 59: {API::setText(i, j, "59"); break; }
+			case 60: {API::setText(i, j, "60"); break; }
+			case 61: {API::setText(i, j, "51"); break; }
+			case 62: {API::setText(i, j, "52"); break; }
+			case 63: {API::setText(i, j, "53"); break; }
+			case 64: {API::setText(i, j, "54"); break; }
+			case 65: {API::setText(i, j, "55"); break; }
+			case 66: {API::setText(i, j, "56"); break; }
+			case 67: {API::setText(i, j, "57"); break; }
+			case 68: {API::setText(i, j, "58"); break; }
+			case 69: {API::setText(i, j, "59"); break; }
+			case 70: {API::setText(i, j, "60"); break; }
+			case 71: {API::setText(i, j, "51"); break; }
+			case 72: {API::setText(i, j, "52"); break; }
+			case 73: {API::setText(i, j, "53"); break; }
+			case 74: {API::setText(i, j, "54"); break; }
+			case 75: {API::setText(i, j, "55"); break; }
+			case 76: {API::setText(i, j, "56"); break; }
+			case 77: {API::setText(i, j, "57"); break; }
+			case 78: {API::setText(i, j, "58"); break; }
+			case 79: {API::setText(i, j, "59"); break; }
+			case 80: {API::setText(i, j, "60"); break; }
+			case 81: {API::setText(i, j, "51"); break; }
+			case 82: {API::setText(i, j, "52"); break; }
+			case 83: {API::setText(i, j, "53"); break; }
+			case 84: {API::setText(i, j, "54"); break; }
+			case 85: {API::setText(i, j, "55"); break; }
+			case 86: {API::setText(i, j, "56"); break; }
+			case 87: {API::setText(i, j, "57"); break; }
+			case 88: {API::setText(i, j, "58"); break; }
+			case 89: {API::setText(i, j, "59"); break; }
+			case 90: {API::setText(i, j, "60"); break; }
+			default: {API::setText(i, j, "?"); break; }
+			}
+		}
+	}
+}
