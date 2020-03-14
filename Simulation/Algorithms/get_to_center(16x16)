@@ -525,7 +525,19 @@ void senseWalls(int theta) {
 		southIsOpen = (API::wallFront()) ? false : true;
 		westIsOpen = (API::wallRight()) ? false : true;
 		break;
+		
 	}
+	
+	//SIMULATION-ONLY
+	//highlight walls that have been seen
+	if(!northIsOpen)
+		API::setWall(currentLocation.yStack, 15-currentLocation.xStack, 'n');
+	if(!eastIsOpen)
+		API::setWall(currentLocation.yStack, 15-currentLocation.xStack, 'e');
+	if(!southIsOpen)
+		API::setWall(currentLocation.yStack, 15-currentLocation.xStack, 's');
+	if(!westIsOpen)
+		API::setWall(currentLocation.yStack, 15-currentLocation.xStack, 'w');
 
 	// assign walls to cell
 	maze[x][y].hasNWall = !northIsOpen;
@@ -824,9 +836,8 @@ int main(int argc, char* argv[]) {
 	//log("Running...");
 
 
-	// disgusting
+	
 	// initial cell values for maze distance to center
-	// STILL NEEDS TESTING
 	int offset;
 	for (int i = 0; i < 16; i++) {
 		if (i < 8)
@@ -842,6 +853,16 @@ int main(int argc, char* argv[]) {
 				maze[i][j].cellValue = j - 1 - offset;
 		}
 	}
+	
+	//SIMULATION-ONLY
+	//highlight all walls along the perimeter of the maze, and put an east wall where the mouse starts
+	for(int i=0; i<16; i++){
+		API::setWall(i,15,'n');
+		API::setWall(15,i,'e');
+		API::setWall(i,0,'s');
+		API::setWall(0,i,'w');
+	}
+	API::setWall(0,0,'e');
 
 
 
