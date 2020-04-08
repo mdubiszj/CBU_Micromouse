@@ -1,4 +1,11 @@
-//taken from Arduino Education website: https://create.arduino.cc/edu/courses/mod/book/view.php?id=83&chapterid=118
+/*
+*
+*   11/8/2019
+*   This program was used for an academic open house. The mouse starts in a corner of a 5x5 maze and wanders the maze 
+*   in a hard-coded routine, but don't tell the kids that ;)
+*/
+
+
 
 #include <MKRMotorCarrier.h>
 #include "BNO055_support.h"
